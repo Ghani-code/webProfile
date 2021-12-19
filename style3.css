@@ -1,0 +1,114 @@
+body {
+  margin: 0;
+  padding: 0;
+  animation: bodyAnimation 2s;
+}
+summary {
+  cursor: pointer;
+  margin: auto;
+  font-size: 30px;
+  /* font-style: "Playfair Display", serif; */
+}
+.logo {
+  margin-top: 18px;
+  margin-bottom: 10px;
+  text-align: center;
+  font-size: 25px;
+  color: rgb(57, 7, 90);
+  font-family: "EB Garamond";
+}
+nav {
+  display: flex;
+  justify-content: center;
+}
+nav a {
+  padding: 20px 18px 5px;
+  text-decoration: none;
+  color: black;
+  font-family: "Montserrat";
+  font-weight: bolder;
+}
+a:hover {
+  text-shadow: 4px 4px 10px;
+}
+header {
+  margin-bottom: 90px;
+}
+@keyframes bodyAnimation {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes text {
+  from {
+    opacity: 0;
+    color: rgb(240, 233, 143);
+    width: 0;
+    height: 0;
+    font-size: 0.1px;
+  }
+  to {
+    width: 350px;
+    height: 150px;
+    color: black;
+    font-size: 15px;
+    opacity: 1;
+  }
+}
+@keyframes indicator {
+  from {
+    height: 0px;
+    width: 0%;
+  }
+  to {
+    height: 150px;
+    width: 2%;
+  }
+}
+div .accordion {
+  width: 350px;
+  height: 150px;
+  background-color: rgb(240, 233, 143);
+  color: rgb(59, 59, 66);
+  text-align: left;
+  margin: auto;
+  border-radius: 10%;
+  animation: text 2s;
+}
+details {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.indicator {
+  float: left;
+  height: 150px;
+  width: 2%;
+  background-color: black;
+  animation: indicator 2s;
+}
+.text {
+  padding: 25px;
+}
+.list {
+  padding: 25px;
+  padding-left: 30px;
+}
+.programing {
+  padding: 25px;
+  position: relative;
+  top: -20px;
+}
+@media screen and (min-width: 941px) {
+  header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px;
+    margin-left: 25px;
+    margin-right: 40px;
+  }
+}

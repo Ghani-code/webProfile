@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PORJECT KSM</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital@1&family=Playfair+Display&display=swap"
+        rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="/css/all.css" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Comforter+Brush&family=Montserrat:wght@100&family=Shadows+Into+Light&family=Zen+Old+Mincho:wght@700&display=swap"
+        rel="stylesheet">
+
+<body>
+    <header>
+        <div class="logo">
+            <i class="fas fa-user-astronaut"></i>&nbsp; KemasGhani.dev
+        </div>
+        <nav>
+            <div id="marker"></div>
+            <a href="index.html">Home</a>
+            <a href="profile.html">Profile</a>
+            <a href="skill.html">About</a>
+            <a href="contact.html">Contact</a>
+            <img class="moon" id="icon"
+                src="https://img.icons8.com/external-bearicons-glyph-bearicons/64/000000/external-moon-halloween-bearicons-glyph-bearicons.png" />
+        </nav>
+    </header>
+    <button onclick="typeWriter()">Click me</button>
+    <p id="demo"></p>
+    <div class="prime">
+        <div class="introduction">
+            <img src="img/profile.jpg" alt="">
+            <div class="container">
+                <p class="text">Hello everyone, i'm Kemas Ghani Sampurna but you can call me Ghani, I study at UPNVJ.
+                    I'm a college student who is passionate about programming especially web development, from learn on
+                    my own to join bootcamp for web development. i've grown my skills in front end, back end, and data
+                    science.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- javascript---------------------------------------------------------------------------------- -->
+    <script type="text/javascript">
+        var i = 0;
+        var txt = "Hi welcome to my web, have nice day :)";
+        var speed = 50;
+
+        function typeWriter() {
+            if (i < txt.length) {
+                document.getElementById("demo").innerHTML += txt.charAt(i);
+                i++;
+                setTimeout(typeWriter, speed);
+            }
+        }
+        var icon = document.getElementById("icon");
+        icon.onclick = function () {
+            document.body.classList.toggle("dark-theme");
+            if (document.body.classList.contains("dark-theme")) {
+                icon.src =
+                    "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHg9IjBweCIgeT0iMHB4Igp3aWR0aD0iNTAiIGhlaWdodD0iNTAiCnZpZXdCb3g9IjAgMCAxNzIgMTcyIgpzdHlsZT0iIGZpbGw6IzAwMDAwMDsiPjxnIGZpbGw9Im5vbmUiIGZpbGwtcnVsZT0ibm9uemVybyIgc3Ryb2tlPSJub25lIiBzdHJva2Utd2lkdGg9IjEiIHN0cm9rZS1saW5lY2FwPSJidXR0IiBzdHJva2UtbGluZWpvaW49Im1pdGVyIiBzdHJva2UtbWl0ZXJsaW1pdD0iMTAiIHN0cm9rZS1kYXNoYXJyYXk9IiIgc3Ryb2tlLWRhc2hvZmZzZXQ9IjAiIGZvbnQtZmFtaWx5PSJub25lIiBmb250LXdlaWdodD0ibm9uZSIgZm9udC1zaXplPSJub25lIiB0ZXh0LWFuY2hvcj0ibm9uZSIgc3R5bGU9Im1peC1ibGVuZC1tb2RlOiBub3JtYWwiPjxwYXRoIGQ9Ik0wLDE3MnYtMTcyaDE3MnYxNzJ6IiBmaWxsPSJub25lIj48L3BhdGg+PGcgZmlsbD0iI2ZmZmZmZiI+PHBhdGggZD0iTTg1LjY3NzUsMTMuNjUyNWMtMC4xNDc4MSwwLjAyNjg4IC0wLjI5NTYyLDAuMDY3MTkgLTAuNDMsMC4xMDc1Yy0xLjU5OTA2LDAuMzYyODEgLTIuNzI3ODEsMS44MDA2MyAtMi42ODc1LDMuNDR2MjAuNjRjLTAuMDEzNDQsMS4yMzYyNSAwLjYzMTU2LDIuMzkxODggMS43MDY1NiwzLjAyMzQ0YzEuMDc1LDAuNjE4MTMgMi4zOTE4NywwLjYxODEzIDMuNDY2ODcsMGMxLjA3NSwtMC42MzE1NiAxLjcyLC0xLjc4NzE5IDEuNzA2NTYsLTMuMDIzNDR2LTIwLjY0YzAuMDQwMzEsLTAuOTk0MzcgLTAuMzYyODEsLTEuOTQ4NDQgLTEuMDc1LC0yLjYyMDMxYy0wLjcyNTYyLC0wLjY4NTMxIC0xLjcwNjU2LC0xLjAyMTI1IC0yLjY4NzUsLTAuOTI3MTl6TTM2LjY1NzUsMzMuODYyNWMtMS4yOSwwLjIyODQ0IC0yLjMyNDY5LDEuMTY5MDYgLTIuNjg3NSwyLjQxODc1Yy0wLjM2MjgxLDEuMjYzMTMgMC4wMTM0NCwyLjYwNjg4IDAuOTY3NSwzLjQ5Mzc1bDE0LjYyLDE0LjYyYzAuODMzMTMsMS4wMjEyNSAyLjE2MzQ0LDEuNDkxNTYgMy40NTM0NCwxLjE5NTk0YzEuMjc2NTYsLTAuMjk1NjIgMi4yODQzOCwtMS4zMDM0NCAyLjU4LC0yLjU4YzAuMjk1NjMsLTEuMjkgLTAuMTc0NjksLTIuNjIwMzEgLTEuMTk1OTQsLTMuNDUzNDRsLTE0LjYyLC0xNC42MmMtMC43MTIxOSwtMC43NjU5NCAtMS43NDY4NywtMS4xNTU2MiAtMi43OTUsLTEuMDc1Yy0wLjEwNzUsMCAtMC4yMTUsMCAtMC4zMjI1LDB6TTEzNC4yNjc1LDMzLjg2MjVjLTAuNzc5MzcsMC4xMDc1IC0xLjUwNSwwLjQ5NzE5IC0yLjA0MjUsMS4wNzVsLTE0LjYyLDE0LjYyYy0xLjAyMTI1LDAuODMzMTMgLTEuNDkxNTYsMi4xNjM0NCAtMS4xOTU5NCwzLjQ1MzQ0YzAuMjk1NjIsMS4yNzY1NiAxLjMwMzQ0LDIuMjg0MzggMi41OCwyLjU4YzEuMjksMC4yOTU2MyAyLjYyMDMxLC0wLjE3NDY5IDMuNDUzNDQsLTEuMTk1OTRsMTQuNjIsLTE0LjYyYzEuMDc1LC0xLjAyMTI1IDEuMzg0MDYsLTIuNjIwMzEgMC43NTI1LC0zLjk2NDA2Yy0wLjY0NSwtMS4zNTcxOSAtMi4wNjkzNywtMi4xMzY1NiAtMy41NDc1LC0xLjk0ODQ0ek04NS42Nzc1LDUxLjZjLTAuMTA3NSwwLjAyNjg4IC0wLjIxNSwwLjA2NzE5IC0wLjMyMjUsMC4xMDc1Yy0wLjIxNSwwLjAxMzQ0IC0wLjQzLDAuMDUzNzUgLTAuNjQ1LDAuMTA3NWMtMC4wNDAzMSwwLjA0MDMxIC0wLjA2NzE5LDAuMDY3MTkgLTAuMTA3NSwwLjEwNzVjLTE4LjI0ODEyLDAuNzc5MzggLTMzLjAwMjUsMTUuNjQxMjUgLTMzLjAwMjUsMzQuMDc3NWMwLDE4LjkzMzQ0IDE1LjQ2NjU2LDM0LjQgMzQuNCwzNC40YzE4LjkzMzQ0LDAgMzQuNCwtMTUuNDY2NTYgMzQuNCwtMzQuNGMwLC0xOC4zNjkwNiAtMTQuNjMzNDQsLTMzLjE3NzE5IC0zMi43ODc1LC0zNC4wNzc1Yy0wLjEyMDk0LDAgLTAuMjAxNTYsLTAuMTA3NSAtMC4zMjI1LC0wLjEwNzVjLTAuMzQ5MzcsLTAuMTM0MzcgLTAuNzEyMTksLTAuMjAxNTYgLTEuMDc1LC0wLjIxNWMtMC4wNjcxOSwwIC0wLjE0NzgxLDAgLTAuMjE1LDBjLTAuMTA3NSwwIC0wLjIxNSwwIC0wLjMyMjUsMHpNODUuNzg1LDU4LjQ4YzAuMDY3MTksMCAwLjE0NzgxLDAgMC4yMTUsMGMwLjEwNzUsMCAwLjIxNSwwIDAuMzIyNSwwYzE1LjA1LDAuMTc0NjkgMjcuMTk3NSwxMi40Mjk2OSAyNy4xOTc1LDI3LjUyYzAsMTUuMjExMjUgLTEyLjMwODc1LDI3LjUyIC0yNy41MiwyNy41MmMtMTUuMTk3ODEsMCAtMjcuNTIsLTEyLjMwODc1IC0yNy41MiwtMjcuNTJjMCwtMTUuMTMwNjIgMTIuMjAxMjUsLTI3LjM5OTA2IDI3LjMwNSwtMjcuNTJ6TTE2LjIzMjUsODIuNTZjLTEuODk0NjksMC4yNjg3NSAtMy4yMjUsMi4wMjkwNiAtMi45NTYyNSwzLjkyMzc1YzAuMjY4NzUsMS44OTQ2OSAyLjAyOTA2LDMuMjI1IDMuOTIzNzUsMi45NTYyNWgyMC42NGMxLjIzNjI1LDAuMDEzNDQgMi4zOTE4OCwtMC42MzE1NiAzLjAyMzQ0LC0xLjcwNjU2YzAuNjE4MTMsLTEuMDc1IDAuNjE4MTMsLTIuMzkxODcgMCwtMy40NjY4N2MtMC42MzE1NiwtMS4wNzUgLTEuNzg3MTksLTEuNzIgLTMuMDIzNDQsLTEuNzA2NTZoLTIwLjY0Yy0wLjEwNzUsMCAtMC4yMTUsMCAtMC4zMjI1LDBjLTAuMTA3NSwwIC0wLjIxNSwwIC0wLjMyMjUsMGMtMC4xMDc1LDAgLTAuMjE1LDAgLTAuMzIyNSwwek0xMzMuMTkyNSw4Mi41NmMtMS44OTQ2OSwwLjI2ODc1IC0zLjIyNSwyLjAyOTA2IC0yLjk1NjI1LDMuOTIzNzVjMC4yNjg3NSwxLjg5NDY5IDIuMDI5MDYsMy4yMjUgMy45MjM3NSwyLjk1NjI1aDIwLjY0YzEuMjM2MjUsMC4wMTM0NCAyLjM5MTg4LC0wLjYzMTU2IDMuMDIzNDQsLTEuNzA2NTZjMC42MTgxMywtMS4wNzUgMC42MTgxMywtMi4zOTE4NyAwLC0zLjQ2Njg3Yy0wLjYzMTU2LC0xLjA3NSAtMS43ODcxOSwtMS43MiAtMy4wMjM0NCwtMS43MDY1NmgtMjAuNjRjLTAuMTA3NSwwIC0wLjIxNSwwIC0wLjMyMjUsMGMtMC4xMDc1LDAgLTAuMjE1LDAgLTAuMzIyNSwwYy0wLjEwNzUsMCAtMC4yMTUsMCAtMC4zMjI1LDB6TTUxLjYsMTE2LjUzYy0wLjc3OTM3LDAuMTA3NSAtMS41MDUsMC40OTcxOSAtMi4wNDI1LDEuMDc1bC0xNC42MiwxNC42MmMtMS4wMjEyNSwwLjgzMzEzIC0xLjQ5MTU2LDIuMTYzNDQgLTEuMTk1OTQsMy40NTM0NGMwLjI5NTYyLDEuMjc2NTYgMS4zMDM0NCwyLjI4NDM4IDIuNTgsMi41OGMxLjI5LDAuMjk1NjMgMi42MjAzMSwtMC4xNzQ2OSAzLjQ1MzQ0LC0xLjE5NTk0bDE0LjYyLC0xNC42MmMxLjAyMTI1LC0wLjk4MDk0IDEuMzMwMzEsLTIuNDk5MzcgMC43NzkzOCwtMy44MDI4MWMtMC41Mzc1LC0xLjMwMzQ0IC0xLjg0MDk0LC0yLjEzNjU2IC0zLjI1MTg4LC0yLjEwOTY5Yy0wLjEwNzUsMCAtMC4yMTUsMCAtMC4zMjI1LDB6TTExOS4zMjUsMTE2LjUzYy0xLjI5LDAuMjI4NDQgLTIuMzI0NjksMS4xNjkwNiAtMi42ODc1LDIuNDE4NzVjLTAuMzYyODEsMS4yNjMxMyAwLjAxMzQ0LDIuNjA2ODggMC45Njc1LDMuNDkzNzVsMTQuNjIsMTQuNjJjMC44MzMxMywxLjAyMTI1IDIuMTYzNDQsMS40OTE1NiAzLjQ1MzQ0LDEuMTk1OTRjMS4yNzY1NiwtMC4yOTU2MiAyLjI4NDM4LC0xLjMwMzQ0IDIuNTgsLTIuNThjMC4yOTU2MywtMS4yOSAtMC4xNzQ2OSwtMi42MjAzMSAtMS4xOTU5NCwtMy40NTM0NGwtMTQuNjIsLTE0LjYyYy0wLjY0NSwtMC42ODUzMSAtMS41MzE4NywtMS4wNjE1NiAtMi40NzI1LC0xLjA3NWMtMC4xMDc1LDAgLTAuMjE1LDAgLTAuMzIyNSwwYy0wLjEwNzUsMCAtMC4yMTUsMCAtMC4zMjI1LDB6TTg1LjY3NzUsMTMwLjYxMjVjLTAuMTQ3ODEsMC4wMjY4OCAtMC4yOTU2MiwwLjA2NzE5IC0wLjQzLDAuMTA3NWMtMS41OTkwNiwwLjM2MjgxIC0yLjcyNzgxLDEuODAwNjMgLTIuNjg3NSwzLjQ0djIwLjY0Yy0wLjAxMzQ0LDEuMjM2MjUgMC42MzE1NiwyLjM5MTg4IDEuNzA2NTYsMy4wMjM0NGMxLjA3NSwwLjYxODEzIDIuMzkxODcsMC42MTgxMyAzLjQ2Njg3LDBjMS4wNzUsLTAuNjMxNTYgMS43MiwtMS43ODcxOSAxLjcwNjU2LC0zLjAyMzQ0di0yMC42NGMwLjA0MDMxLC0wLjk5NDM3IC0wLjM2MjgxLC0xLjk0ODQ0IC0xLjA3NSwtMi42MjAzMWMtMC43MjU2MiwtMC42ODUzMSAtMS43MDY1NiwtMS4wMjEyNSAtMi42ODc1LC0wLjkyNzE5eiI+PC9wYXRoPjwvZz48L2c+PC9zdmc+"
+            } else {
+                icon.src =
+                    "https://img.icons8.com/external-bearicons-glyph-bearicons/64/000000/external-moon-halloween-bearicons-glyph-bearicons.png"
+            }
+        }
+    </script>
+</body>
+
+</html>

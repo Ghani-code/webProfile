@@ -1,0 +1,156 @@
+body {
+  margin: 0;
+  padding: 0;
+  background-color: rgb(255, 255, 255);
+  animation: bodyAnimation 2s;
+}
+.logo {
+  margin-top: 18px;
+  margin-bottom: 10px;
+  text-align: center;
+  font-size: 25px;
+  color: rgb(57, 7, 90);
+  font-family: "EB Garamond";
+}
+nav {
+  display: flex;
+  justify-content: center;
+}
+nav a {
+  padding: 20px 18px 5px;
+  text-decoration: none;
+  color: black;
+  font-family: "Montserrat";
+  font-weight: bolder;
+}
+a:hover {
+  text-shadow: 4px 4px 10px;
+}
+.all {
+  position: relative;
+}
+
+/* main ------------------------------------------------------------------------------------*/
+.skill {
+  text-align: center;
+  margin-top: 50px;
+}
+.specified_skill {
+  columns: 1;
+}
+.container {
+  margin: auto;
+  width: 180px;
+  background-color: rgba(75, 73, 70, 0.521);
+  color: aliceblue;
+  margin-bottom: 15px;
+}
+.html {
+  width: 90%;
+  background-color: black;
+  text-align: end;
+  animation: htmlAnimation 2s;
+}
+.css {
+  width: 80%;
+  background-color: black;
+  text-align: end;
+  animation: cssAnimation 2s;
+}
+.php {
+  width: 70%;
+  background-color: black;
+  text-align: end;
+  animation: phpAnimation 2s;
+}
+.javascript {
+  width: 60%;
+  background-color: black;
+  text-align: end;
+  animation: jsAnimation 2s;
+}
+@keyframes htmlAnimation {
+  from {
+    width: 0;
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+    width: 90%;
+  }
+}
+@keyframes cssAnimation {
+  from {
+    width: 0;
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+    width: 80%;
+  }
+}
+@keyframes phpAnimation {
+  from {
+    width: 0;
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+    width: 70%;
+  }
+}
+@keyframes jsAnimation {
+  from {
+    width: 0;
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+    width: 60%;
+  }
+}
+@keyframes bodyAnimation {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.indicator {
+  left: 0;
+  width: 10px;
+  height: 100px;
+  position: absolute;
+  background-color: rgba(75, 56, 56, 0.363);
+}
+.text {
+  margin: auto;
+  position: relative;
+  background-color: rgb(255, 234, 205);
+  width: 400px;
+  height: 100px;
+}
+.text p {
+  padding: 15px;
+  padding-left: 19px;
+}
+@media screen and (min-width: 941px) {
+  header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px;
+    margin-left: 25px;
+    margin-right: 40px;
+  }
+  .text {
+    width: 700px;
+    height: 70px;
+  }
+  .indicator {
+    width: 10px;
+    height: 70px;
+  }
+}

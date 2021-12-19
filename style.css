@@ -1,0 +1,149 @@
+.dark-theme {
+  --primary-color: black;
+  --secondary-color: white;
+}
+body {
+  margin: 0;
+  padding: 0;
+  background-color: var(--primary-color);
+  animation: bodyAnimation 2s;
+}
+@keyframes bodyAnimation {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+.logo {
+  margin-top: 18px;
+  margin-bottom: 10px;
+  text-align: center;
+  font-size: 25px;
+  color: blueviolet;
+  font-family: "EB Garamond";
+}
+nav {
+  display: flex;
+  justify-content: center;
+}
+nav a {
+  padding: 20px 18px 5px;
+  text-decoration: none;
+  color: var(--secondary-color);
+  font-family: "Montserrat";
+  font-weight: bolder;
+}
+a:hover {
+  text-shadow: 4px 4px 10px;
+}
+button {
+  display: flex;
+  margin: auto;
+  margin-top: 40px;
+  text-align: center;
+  padding: 10px;
+  background-color: antiquewhite;
+  border-radius: 20%;
+  cursor: pointer;
+}
+button:hover {
+  opacity: 0.6;
+}
+nav #marker {
+  position: absolute;
+  height: 2px;
+  left: 0;
+  background-color: var(--secondary-color);
+  top: 40px;
+  transition: 0.3s;
+  border-radius: 4px;
+}
+#demo {
+  color: var(--secondary-color);
+  font-family: "Comforter Brush";
+  font-size: 30px;
+  text-align: center;
+}
+.style {
+  font-family: "Comforter Brush";
+}
+img {
+  width: 150px;
+  height: 200px;
+  margin-left: 110px;
+  margin-top: 70px;
+  border-radius: 10%;
+  transition: 3s;
+}
+.moon {
+  width: 5%;
+  height: 5%;
+  padding: 0%;
+  margin: 0%;
+  margin-left: 20px;
+  margin-top: 19px;
+  cursor: pointer;
+  animation: logo 1s;
+}
+@keyframes logo {
+  from {
+    width: 0%;
+    height: 0%;
+  }
+  to {
+    width: 5%;
+    height: 5%;
+  }
+}
+.container {
+  opacity: 0;
+  position: absolute;
+  font-size: 0.001px;
+  color: rgb(0, 0, 0);
+  top: 0;
+  left: 0;
+  width: 50px;
+  height: 50px;
+  border-radius: 10%;
+  background-color: rgba(92, 75, 75, 0.719);
+  z-index: -1;
+  transition: 3s;
+}
+.introduction {
+  position: relative;
+  margin: 20px auto;
+  width: 375px;
+  height: 375px;
+}
+
+.introduction:hover .container {
+  width: 375px;
+  height: 375px;
+  font-size: 17px;
+  opacity: 1;
+  color: aliceblue;
+}
+.introduction:hover img {
+  width: 75px;
+  height: 100px;
+  margin-left: 270px;
+  margin-top: 250px;
+  border-radius: 50%;
+  transform: rotate(720deg);
+}
+.text {
+  font-family: "Shadows Into Light", cursive;
+  padding: 20px;
+}
+@media screen and (min-width: 941px) {
+  header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px;
+    margin-left: 25px;
+    margin-right: 0px;
+  }
+}
